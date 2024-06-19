@@ -1,0 +1,10 @@
+{
+  "index": "Startseite",
+  "semester1": "1. Semester",
+  "donate": {
+    "title": "Supporte mich!",
+    "type": "page",
+    "href": "https://ko-fi.com/zaroc",
+    "newWindow": true
+  }
+}

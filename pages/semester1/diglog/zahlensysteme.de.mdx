@@ -1,0 +1,132 @@
+# Zahlensysteme
+
+## Binärsystem
+
+Das Binärsystem ist ein Zahlensystem, das nur die Ziffern 0 und 1 verwendet.
+Es ist das Grundlage für die digitale Datenverarbeitung und wird in der Informatik und Elektrotechnik verwendet.
+
+Eine typische Darstellung von Binärzahlen ist $1010_2$, wobei der Index 2 angibt, dass es sich um eine Binärzahl handelt.
+
+Als Index kann auch `bin` oder `b` verwendet werden, um anzuzeigen, dass es sich um eine Binärzahl handelt.
+
+### Umrechnung von Binär in Dezimal
+
+Die Umrechnung von Binär in Dezimal erfolgt nach folgender Formel:
+
+$dez_{10} = a_0 * 2^0 + a_1 * 2^1 + a_2 * 2^2 + ... + a_n * 2^n$
+
+Wobei $a_0, a_1, a_2, ..., a_n$ die Binärziffern sind.
+
+Somit wäre die Umrechnung von $1010_2$ in Dezimal:
+
+$10_{10} = 1 * 2^3 + 0 * 2^2 + 1 * 2^1 + 0 * 2^0 = 10$
+
+### Umrechnung von Dezimal in Binär
+
+Die Umrechnung von Dezimal in Binär erfolgt durch Division mit 2 und Restbildung.
+
+Dabei wird der Rest der Division als Binärziffer verwendet.
+
+Beispiel: Umrechnung von 10 in Binär:
+
+- $10 / 2 = 5 \; Rest \; 0$
+- $5 / 2 = 2 \; Rest \; 1$
+- $2 / 2 = 1 \, Rest \; 0$
+- $1 / 2 = 0 \; Rest \; 1$
+
+Somit ergibt sich die Binärzahl $1010_2$.
+
+## Hexadezimalsystem
+
+Das Hexadezimalsystem ist ein Zahlensystem, das die Ziffern 0-9 und die Buchstaben A-F verwendet.
+
+Eine typische Darstellung von Hexadezimalzahlen ist $A1F_{16}$, wobei der Index 16 angibt, dass es sich um eine Hexadezimalzahl handelt.
+
+Als Index kann auch `hex` oder `h` verwendet werden, um anzuzeigen, dass es sich um eine Hexadezimalzahl handelt.
+
+### Umrechnung von Hexadezimal in Dezimal
+
+Die Umrechnung von Hexadezimal in Dezimal erfolgt nach folgender Formel:
+
+$dez_{10} = a_0 * 16^0 + a_1 * 16^1 + a_2 * 16^2 + ... + a_n * 16^n$
+
+Wobei $a_0, a_1, a_2, ..., a_n$ die Hexadezimalziffern sind.
+
+Somit wäre die Umrechnung von $A1F_{16}$ in Dezimal:
+
+$1615_{10} = 10 * 16^2 + 1 * 16^1 + 15 * 16^0 = 2591$
+
+### Umrechnung von Dezimal in Hexadezimal
+
+Die Umrechnung von Dezimal in Hexadezimal erfolgt durch Division mit 16 und Restbildung.
+
+Dabei werden die Reste der Division als Hexadezimalziffern verwendet.
+
+Beispiel: Umrechnung von 1615 in Hexadezimal:
+
+- $1615 / 16 = 100 \; Rest \; 15 (F)$
+
+- $100 / 16 = 6 \; Rest \; 4$
+
+- $6 / 16 = 0 \; Rest \; 6$
+
+Somit ergibt sich die Hexadezimalzahl $64F_{16}$.
+
+## Oktalsystem
+
+Das Oktalsystem ist ein Zahlensystem, das die Ziffern 0-7 verwendet.
+
+Eine typische Darstellung von Oktalzahlen ist $123_8$, wobei der Index 8 angibt, dass es sich um eine Oktalzahl handelt.
+
+Als Index kann auch `oct` oder `o` verwendet werden, um anzuzeigen, dass es sich um eine Oktalzahl handelt.
+
+### Umrechnung von Oktal in Dezimal
+
+Die Umrechnung von Oktal in Dezimal erfolgt nach folgender Formel:
+
+$dez_{10} = a_0 * 8^0 + a_1 * 8^1 + a_2 * 8^2 + ... + a_n * 8^n$
+
+Wobei $a_0, a_1, a_2, ..., a_n$ die Oktalziffern sind.
+
+Somit wäre die Umrechnung von $123_8$ in Dezimal:
+
+$83_{10} = 1 * 8^2 + 2 * 8^1 + 3 * 8^0 = 83$
+
+### Umrechnung von Dezimal in Oktal
+
+Die Umrechnung von Dezimal in Oktal erfolgt durch Division mit 8 und Restbildung.
+
+Dabei werden die Reste der Division als Oktalziffern verwendet.
+
+Beispiel: Umrechnung von 83 in Oktal:
+
+- $83 / 8 = 10 \; Rest \; 3$
+- $10 / 8 = 1 \; Rest \; 2$
+- $1 / 8 = 0 \; Rest \; 1$
+
+Somit ergibt sich die Oktalzahl $123_8$.
+
+## Weitere Umrechnungen zwischen Zahlensystemen
+
+### Umrechnung zwischen Binär und Hexadezimal
+
+Am einfachsten kann man Binärzahlen in Hexadezimalzahlen umwandeln, indem man die Binärzahl in 4-Bit-Blöcke unterteilt und diese Blöcke in Hexadezimalzahlen umwandelt.
+
+| Dezimal | Binär | Hexadezimal |
+| :------ | ----- | ----------: |
+| 0       | 0000  |           0 |
+| 1       | 0001  |           1 |
+| 2       | 0010  |           2 |
+| 3       | 0011  |           3 |
+| 4       | 0100  |           4 |
+| 5       | 0101  |           5 |
+| 6       | 0110  |           6 |
+| 7       | 0111  |           7 |
+| 8       | 1000  |           8 |
+| 9       | 1001  |           9 |
+| 10      | 1010  |           A |
+| 11      | 1011  |           B |
+| 12      | 1100  |           C |
+| 13      | 1101  |           D |
+| 14      | 1110  |           E |
+| 15      | 1111  |           F |

@@ -1,0 +1,144 @@
+# Aufgabenblatt 3
+
+```python
+from random import randint
+
+# Aufgabe 3.0
+def scheresteinpapier():
+    options = ["Schere", "Stein", "Papier"]
+    print("Schere, Stein oder Papier?")
+
+    isGameOver = False
+
+    while(not isGameOver):
+
+        user_input = input()
+        if user_input not in options:
+            print("Falsche Eingabe")
+            return
+
+        computer_input = options[randint(0, 2)]
+        print(f"Computer: {computer_input}")
+
+        if user_input == computer_input:
+            print("Unentschieden")
+        elif user_input == "Schere":
+            if computer_input == "Stein":
+                print("Computer gewinnt")
+            else:
+                print("Spieler gewinnt")
+                isGameOver = True
+        elif user_input == "Stein":
+            if computer_input == "Papier":
+                print("Computer gewinnt")
+            else:
+                print("Spieler gewinnt")
+                isGameOver = True
+        elif user_input == "Papier":
+            if computer_input == "Schere":
+                print("Computer gewinnt")
+            else:
+                print("Spieler gewinnt")
+                isGameOver = True
+        else:
+            print("Falsche Eingabe")
+            isGameOver = True
+
+# Aufgabe 3.1
+def ratespiel(n:int):
+    randomNumber = randint(1, n)
+
+    print(f"Raten Sie eine Zahl zwischen 1 und {n}")
+    anzahlVersuche = 0
+    isGameOver = False
+
+    while(not isGameOver):
+        user_input = int(input())
+        anzahlVersuche += 1
+        if user_input == randomNumber:
+            print("Richtig geraten")
+            isGameOver = True
+            print(f"Anzahl Versuche: {anzahlVersuche}")
+        elif user_input < randomNumber:
+            print("Zu niedrig")
+        else:
+            print("Zu hoch")
+
+    return anzahlVersuche
+#Aufgabe 3.2
+def erzeugeListeKleinbuchstaben():
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    konsonanten = "bcdfghjklmnpqrstvwxyz"
+    characters = list(alphabet)
+    print(characters)
+    combinationsBase = []
+
+    # Basisalgorithmus um alle möglichen Kombinationen zu erzeugen, dabei wird
+    # wie in der Aufgabe 26^4 mal iteriert.
+    for char1 in characters:
+        for char2 in characters:
+            for char3 in characters:
+                for char4 in characters:
+                    combination = char1 + char2 + char3 + char4
+                    combinationsBase.append(combination)
+
+
+
+    # Filtern der Kombinationen, sodass nur Kombinationen ohne doppelte Konsonanten
+    # in der Mitte enthalten sind
+
+    print(len(combinationsBase))
+
+    combinationFiltered = []
+
+    for char1 in characters:
+        for char2 in characters:
+            for char3 in characters:
+                for char4 in characters:
+                    combination = char1 + char2 + char3 + char4
+
+                    if char2 in konsonanten and char3 in konsonanten:
+                        continue
+                    combinationFiltered.append(combination)
+
+    print(len(combinationFiltered))
+
+#Aufgabe 3.3
+def workWithDict(d:dict):
+
+    # Aufgabe 3.3 a)
+    # len(d)
+    print(len(d.items()))
+
+    keys = d.keys()
+    #Aufgabe 3.3 b)
+    print(keys.__contains__("Hallo"))
+
+    # ist das gleiche und der korrekte Weg
+    print("Hallo" in d)
+    #Aufgabe 3.3 c)
+
+    keys = list(keys)
+    areAllKeysInteger = True
+
+    for k in keys:
+        if type(k) is not int:
+            areAllKeysInteger = False
+            break
+
+    print(f"Alle Schlüssel sind Integer: {areAllKeysInteger}")
+
+    # Aufgabe 3.3 d)
+    d[1] = 2
+    # Nur Testzwecke
+    d["Obst"] = "Banane"
+    print(d)
+
+
+
+if __name__ == "__main__":
+    #ratespiel(100)
+    print(erzeugeListeKleinbuchstaben())
+
+    workWithDict({1: "a", 2: "b", 3: "c"})
+```
