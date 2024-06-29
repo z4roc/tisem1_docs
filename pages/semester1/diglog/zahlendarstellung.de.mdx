@@ -1,0 +1,74 @@
+# Zahlendarstellung
+
+Zuerst wiederhole die einzelnen Zahlensysteme und ihre Umrechnungsmethoden.
+
+## Kommazahlen in Binär
+
+Bei standardmäßigen Kommazahlen wird die Zahl in zwei Teile geteilt: den Vorkommabereich und den Nachkommabereich.
+Der Vorkommabereich wird wie gewohnt in Binär umgerechnet.
+
+Der Nachkommabereich jedoch, wird mit 2 multipliziert und der ganze Teil wird als Binärzahl genommen.
+
+> Hier ein Zahlenrechner um die Umrechnung zu üben und zu testen:
+
+import { Zahlenrechner } from "../../../components/Zahlenrechner";
+
+<Zahlenrechner />
+
+## Gleitkommazahlen IEEE 754
+
+Gleitkommazahlen werden im IEEE 754 Standard dargestellt.
+Die Zahl wird in drei Teile aufgeteilt: Vorzeichen, Exponent und Mantisse.
+
+### Gleitkommazahlen IEEE 754
+
+Gleitkommazahlen werden im IEEE 754 Standard dargestellt.
+Die Zahl wird in drei Teile aufgeteilt: Vorzeichen, Exponent und Mantisse.
+
+$$
+(-1)^s \cdot 1.m \cdot 2^{e - 127}
+$$
+
+Wobei $s$ das Vorzeichen, $m$ die Mantisse und $e$ der Exponent ist.
+
+Die -127 kann auch als Bias bezeichnet werden, dieser variiert je nach Angabe in der Aufgabe.
+
+#### Vorzeichen
+
+Das Vorzeichen gibt an, ob die Zahl positiv oder negativ ist.
+
+#### Exponent
+
+Der Exponent gibt an, wie viele Stellen die Zahl verschoben werden muss.
+
+#### Mantisse
+
+Die Mantisse ist der eigentliche Wert der Zahl.
+
+### Umrechnung
+
+Die Umrechnung von Dezimalzahlen in Gleitkommazahlen erfolgt in folgenden Schritten:
+
+1. Bestimme das Vorzeichen $s$, 1 für negativ, 0 für positiv.
+
+2. Schreibe die Dezimalzahl in Binärform.
+
+3. Verschiebe das Komma so, dass nur eine Stelle vor dem Komma steht. (Normalisierung, verschiebe bis zur ersten 1)
+
+4. Bestimme den Exponenten $e$, $e$ ist dabei wie weit du dein Komma verschieben musstest.
+
+5. Schreibe die Mantisse $m$ -> Die Mantisse kannst du einfach aus deiner Rechnung übernehmen, alles was nach dem Komma steht.
+
+Umrechnung am Beispiel $-10.75$ für IEEE 754 in 32 Bit Darstellung:
+
+1. Vorzeichen: $s = 1$, da die Zahl negativ ist.
+
+2. Binärform: $1010.11$, da $10 = 1010$ und $0.75 = 0.11$, siehe dafür oben.
+
+3. Normalisierung: $1010.11 \cdot 2^0$ in $1.01011 \cdot 2^3$
+
+4. Exponent: $e = 3 + 127 = 130$, also $10000010$ in Binär.
+
+5. Mantisse: $01011$
+
+Somit ergibt sich die Gleitkommazahl $1$ $10000010$ $01011000000000000000000$.
