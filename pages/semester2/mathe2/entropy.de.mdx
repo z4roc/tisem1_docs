@@ -1,0 +1,14 @@
+# Entropie
+
+Formel: $H(X) = - \sum_{i=1}^{n} p(x_i) \cdot \log_2 p(x_i)$
+
+Auf deutsch: $H(X)$ ist die Entropie von $X$ und wird berechnet
+Dabei ist $p(x_i)$ die Wahrscheinlichkeit, dass $X$ den Wert $x_i$ annimmt.
+Dies wird mit dem Logarithmus zur Basis 2 (Logarithmus Dualis) multipliziert und negiert.
+
+import { Callout } from "nextra-theme-docs";
+
+<Callout type="warning">
+  In der Prfüng auf die Wahrscheinlichkeiten achten, und manchmal wird der
+  Logarithmus zur Basis 2 nicht verwendet.
+</Callout>
