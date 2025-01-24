@@ -1,0 +1,31 @@
+# Erwartungswert
+
+Der Erwartungswert ist ein Maß für die mittlere Größe einer Zufallsvariablen.
+Er wird auch als Mittelwert bezeichnet.
+Der Erwartungswert einer Zufallsvariablen $X$ wird mit $E(X)$ bezeichnet.
+
+## Formel
+
+Der Erwartungswert einer Zufallsvariablen $X$ wird berechnet durch:
+
+$$E(X) = \sum_{i=1}^{n} x_i \cdot p(x_i)$$
+
+Dabei ist $x_i$ der Wert, den die Zufallsvariable $X$ annehmen kann und $p(x_i)$ die Wahrscheinlichkeit,
+dass $X$ den Wert $x_i$ annimmt.
+
+## Beispiel
+
+### Fairer Würfel: $X = \{1, 2, 3, 4, 5, 6\}$
+
+$$E(X) = \frac{1}{6} \cdot 1 + \frac{1}{6} \cdot 2 + \frac{1}{6} \cdot 3 + \frac{1}{6} \cdot 4 + \frac{1}{6} \cdot 5 + \frac{1}{6} \cdot 6 = 3.5$$
+
+Der Erwartungswert des Würfels beträgt also 3.5.
+Somit ist die erwartete Menge $E(X) \in \{3,4\}$
+
+### Gacha Game: $X = \{3 \text{ Sterne}, 4 \text{ Sterne}, 5 \text{ Sterne}\}$ (Ausgenommen Pity)
+
+- $3 \text{ Sterne}$: $p(x_i) = \frac{944}{1000}$ (94.4%)
+- $4 \text{ Sterne}$: $p(x_i) = \frac{50}{1000}$ (5%)
+- $5 \text{ Sterne}$: $p(x_i) = \frac{6}{1000}$ (0.6%)
+
+$$E(X) = \frac{944}{1000} \cdot 3 + \frac{50}{1000} \cdot 4 + \frac{6}{1000} \cdot 5 = 3.062$$
