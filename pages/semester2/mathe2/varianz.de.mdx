@@ -1,0 +1,77 @@
+---
+title: "Varianz"
+description: "Grundlagen der Varianz – Definition, Bedeutung und Beispiel"
+---
+
+# 📊 Varianz
+
+Die **Varianz** ist ein Maß dafür, wie stark die Werte einer Stichprobe oder einer Grundgesamtheit im Durchschnitt vom Mittelwert abweichen.
+
+```math
+\quad \sigma^2 = \frac{1}{n} \sum_{i=1}^{n}(x_i - \mu)^2
+```
+
+```math
+\quad s^2 = \frac{1}{n-1} \sum_{i=1}^{n}(x_i - \bar{x})^2
+```
+
+## 🧮 Bedeutung
+
+Die Varianz zeigt:
+
+- Ob die Daten eher **nah am Mittelwert** liegen (kleine Varianz)
+- Oder **weit streuen** (große Varianz)
+
+---
+
+## 📌 Schritte zur Berechnung
+
+1. **Mittelwert berechnen**: $\mu$ oder $\bar{x}$
+2. **Abweichungen vom Mittelwert quadrieren**: $(x_i - \mu)^2$
+3. **Alle quadrierten Abweichungen aufsummieren**
+4. **Durch $n$ (Population) oder $n - 1$ (Stichprobe) teilen**
+
+---
+
+## 📉 Beispiel
+
+Gegeben: Werte $x = [2, 4, 4, 4, 5, 5, 7, 9]$
+
+- Mittelwert: $\bar{x} = 5$
+- Differenzen: $[-3, -1, -1, -1, 0, 0, 2, 4]$
+- Quadrieren: $[9, 1, 1, 1, 0, 0, 4, 16]$
+- Summe: $32$
+- Varianz (Population): $\frac{32}{8} = 4$
+
+---
+
+## 📌 Zusammenhang zur Standardabweichung
+
+Die **Standardabweichung** ist die **Wurzel der Varianz**:
+
+```math
+\sigma = \sqrt{\sigma^2}, \quad s = \sqrt{s^2}
+```
+
+---
+
+## Faithful to Expectation Value
+
+Das bedeutet:
+
+🎯 Interpretation im Kontext der Varianz
+$s^2_{[n-1]}$ ist die Stichprobenvarianz mit dem Nenner $n-1$.
+
+$\sigma^2_{[n]}$ ist die wahre (aber unbekannte) Populationsvarianz.
+
+Die Aussage besagt:
+
+Der Erwartungswert (Mittelwert über viele Stichproben) der Stichprobenvarianz $s^2$ ist gleich der wahren Varianz $\sigma^2$ der Population.
+
+## 🧠 Merksatz
+
+> „Varianz misst die Streuung der Daten um ihren Mittelwert – je größer die Abweichungen, desto größer die Varianz.“
+
+---
+
+**Hinweis**: Diese Erklärung basiert auf der Lehre von Prof. Dr. Hower zur **diskreten Mathematik** und den **statistischen Grundlagen**.

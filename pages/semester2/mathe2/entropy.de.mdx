@@ -8,12 +8,56 @@ Dies wird mit dem Logarithmus zur Basis 2 (Logarithmus Dualis) multipliziert und
 
 Die Entropie ist ein Maß für die Unordnung oder den Informationsgehalt einer Zufallsvariablen.
 
-import { Callout } from "nextra-theme-docs";
+In der Prfüng auf die Wahrscheinlichkeiten achten, und manchmal wird der
+Logarithmus zur Basis 2 nicht verwendet.
 
-<Callout type="warning">
-  In der Prfüng auf die Wahrscheinlichkeiten achten, und manchmal wird der
-  Logarithmus zur Basis 2 nicht verwendet.
-</Callout>
+## Was ist Entropie?
+
+Entropie misst den Informationsgehalt bzw. die Ungewissheit eines Zufallsprozesses.
+
+- Viel Entropie = viele Möglichkeiten → große Überraschung.
+- Wenig Entropie = sehr vorhersehbar → wenig Überraschung.
+
+## Ziel der Entropie
+
+> Wie viel Information (in Bits) gewinne ich im Durchschnitt, wenn ich ein zufälliges Ereignis beobachte?
+
+## Herleitung der Entropie-Formel
+
+### Schritt 1: Informationsgehalt eines einzelnen Ereignisses
+
+Wir definieren:
+
+$$I(p) = \log_2\left(\frac{1}{p}\right) = -\log_2(p)$$
+
+### Schritt 2: Warum log₂(1/p)?
+
+- $\frac{1}{p}$ gibt die Anzahl möglicher Fälle an.
+- $\log_2$ zählt die Anzahl an Bits (Ja/Nein-Entscheidungen), um ein Ereignis zu identifizieren.
+
+### Schritt 3: Erwartungswert über alle Ereignisse
+
+```math
+H = -\sum p_i \cdot \log_2(p_i)
+```
+
+## Beispiel
+
+Ein fairer Würfel:
+
+- 6 Seiten → \(p = \frac{1}{6}\)
+- Entropie:
+
+```math
+H = -6 \cdot \left( \frac{1}{6} \cdot \log_2\left( \frac{1}{6} \right) \right) \approx 2{,}585 \text{ Bits}
+```
+
+## Merksätze für die Klausur
+
+- Entropie misst, wie überraschend ein Zufallsergebnis ist.
+- Je gleichmäßiger die Verteilung, desto höher die Entropie.
+- $\log_2(1/p)$ → „Wie viele Ja/Nein-Fragen brauche ich?“
+- Die Entropie ist der Durchschnitt aller Informationsgehalte.
 
 ## Beispiel
 
@@ -26,3 +70,11 @@ import { Callout } from "nextra-theme-docs";
 - $5 \text{ Sterne}$: $p(x_i) = \frac{6}{1000}$ (0.6%)
 
 $$H(X) = - \left( \frac{944}{1000} \cdot \log_2 \frac{944}{1000} + \frac{50}{1000} \cdot \log_2 \frac{50}{1000} + \frac{6}{1000} \cdot \log_2 \frac{6}{1000} \right) = 0.206$$
+
+## Anwendungen
+
+- Datenkompression
+- Kryptographie
+- Maschinelles Lernen
+
+**Viel Erfolg bei der Klausur!**
