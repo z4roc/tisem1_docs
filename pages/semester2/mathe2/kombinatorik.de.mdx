@@ -1,0 +1,65 @@
+# Kombinatorik
+
+## Permutation
+
+Permutation ist eine Anordnung aller Elemente einer Menge in einer bestimmten Reihenfolge. Die Anzahl der Permutationen von \( n \) Elementen wird durch \( n! \) (n Fakultät) gegeben.
+Dabei wird keine Auswahl getroffen, sondern alle Elemente werden in eine Reihenfolge gebracht.
+
+$P(n) = n! $
+
+Beispiel:
+Wie viele Möglichkeiten gibt es, drei Bücher anzuordnen?
+Antwort:
+
+$3!=3 \cdot 2 \cdot 1=6$ Möglichkeiten.
+
+Bei mehreren Möglichkeiten, z.B. wenn einige Elemente identisch sind, wird die Formel angepasst:
+
+$$P(n_1, n_2, \ldots, n_k) = \frac{n!}{n_1! \cdot n_2! \cdots n_k!}$$
+
+wobei $n_1, n_2, \ldots, n_k$ die Anzahl der identischen Elemente in den verschiedenen Gruppen sind.
+
+#### Beispiel dafür:
+
+> Wie viele Buchstabenkombinationen gibt es für das Wort "Keller"?
+
+Antwort:
+
+$$P(6, 2) = \frac{6!}{1! \cdot 1! \cdot 2! \cdot 2!} = 160$$
+
+## Kombination
+
+Eine Auswahl von $k$ Elementen aus einer Menge von $n$ Elementen, bei der die Reihenfolge keine Rolle spielt.
+
+Die Anzahl der Kombinationen wird durch den Binomialkoeffizienten gegeben:
+
+$$C(n, k) = \frac{n!}{k!(n-k)!}$$
+
+## Variation
+
+- Es wird eine Auswahl getroffen.
+- Reihenfolge ist wichtig.
+
+### Wenn Wiederholungen möglich sind
+
+$V(n, k) = n^k$
+
+Beispiel:
+Wie viele Möglichkeiten gibt es für einen 4 Stelligen Code aus den Ziffern 0-9, wenn Wiederholungen erlaubt sind?
+
+Antwort:
+$$V(10, 4) = 10^4 = 10000$$
+
+### Wenn Wiederholungen nicht möglich sind
+
+$V(n, k) = \frac{n!}{(n-k)!}$
+
+Beispiel:
+7 Vereine für Platz 1-3 in einem Turnier. Wie viele Anordnungen gibt es?
+
+Antwort:
+$$V(7, 3) = \frac{7!}{(7-3)!} = \frac{7!}{4!} = 7 \cdot 6 \cdot 5 = 210$$
+
+## Kurzfassung Grafik
+
+![Kombinatorik](/mathe2/kombinatorik.png)

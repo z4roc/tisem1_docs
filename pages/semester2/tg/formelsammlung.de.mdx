@@ -1,0 +1,302 @@
+#### **1. Grundlagen des elektrischen Stroms**
+
+**Stromdichte (J)**
+Die Stromdichte gibt an, wie viel Strom durch eine bestimmte Querschnittsfläche eines Leiters fließt.
+
+- **Formel:**
+  $J = \frac{I}{A}$
+- **Variablen:**
+  - $J$: Stromdichte
+  - $I$: Elektrischer Strom
+  - $A$: Leiterquerschnittsfläche
+- **SI-Einheiten:**
+  - $J$: Ampere pro Quadratmeter ($A/m^2$)
+  - $I$: Ampere ($A$)
+  - $A$: Quadratmeter ($m^2$)
+- **Tipps und Fehlervermeidung:**
+  - In den Aufgaben wird der Querschnitt oft in Quadratmillimetern ($mm^2$) angegeben. Rechnen Sie diesen unbedingt in Quadratmeter um, um die SI-Einheit der Stromdichte zu erhalten.
+  - **Umrechnung:** $1~mm^2 = 1 \cdot 10^{-6}~m^2$.
+  - Die Strombeschränkung in Leitungen dient dazu, eine übermäßige Wärmeentwicklung zu verhindern.
+
+---
+
+#### **2. Ohmscher Widerstand und Schaltungen**
+
+**Widerstand eines Leiters**
+Der Widerstand eines Drahtes hängt von seinem Material, seiner Länge und seiner Querschnittsfläche ab. [cite: 1696]
+
+- **Formel:**
+  $R = \rho \cdot \frac{l}{A}$ [cite: 1696]
+- **Variablen:**
+  - $R$: Elektrischer Widerstand
+  - $\rho$ (rho): Spezifischer Widerstand des Materials [cite: 1697]
+  - $l$: Länge des Leiters [cite: 1696]
+  - $A$: Leiterquerschnittsfläche [cite: 1696]
+- **SI-Einheiten:**
+  - $R$: Ohm ($\Omega$)
+  - $\rho$: Ohm-Meter ($\Omega \cdot m$)
+  - $l$: Meter ($m$)
+  - $A$: Quadratmeter ($m^2$)
+- **Tipps und Fehlervermeidung:**
+  - Der spezifische Widerstand $\rho$ wird in Tabellen oft in $\frac{\Omega \cdot mm^2}{m}$ angegeben (siehe z.B. Kupfer mit $\rho_{cu} = 0.017 \frac{\Omega \cdot mm^2}{m}$). [cite: 1721] Wenn Sie die Fläche $A$ in $mm^2$ und die Länge $l$ in $m$ einsetzen, kürzen sich die Einheiten korrekt und das Ergebnis ist direkt in Ohm ($\Omega$).
+  - Achten Sie bei Zuleitungen darauf, die Gesamtlänge zu berücksichtigen (Hin- und Rückleiter). [cite: 1706]
+
+**Ohmsches Gesetz**
+Dies ist die fundamentale Beziehung zwischen Spannung, Strom und Widerstand. [cite: 1749]
+
+- **Formel:**
+  $U = R \cdot I$ [cite: 1750]
+- **Variablen:**
+  - $U$: Spannung
+  - $R$: Widerstand
+  - $I$: Strom
+- **SI-Einheiten:**
+  - $U$: Volt ($V$)
+  - $R$: Ohm ($\Omega$)
+  - $I$: Ampere ($A$)
+
+**Widerstände in Reihenschaltung**
+Bei einer Reihenschaltung ist der Gesamtwiderstand die Summe der Einzelwiderstände. [cite: 1871, 1873]
+
+- **Formel (Gesamtwiderstand):**
+  $R_{ges} = \sum_{i=1}^{n} R_i = R_1 + R_2 + \dots + R_n$ [cite: 1877]
+- **Spannungsteiler-Regel:**
+  Die Spannung teilt sich proportional zu den Widerständen auf. [cite: 1880] Die Spannung $U_{out}$ über einer Teilgruppe von Widerständen (z.B. $R_2$ bis $R_n$) berechnet sich wie folgt:
+  $\frac{U_{out}}{U_{in}} = \frac{R_2 + \dots + R_n}{R_{ges}}$ [cite: 1881]
+- **Tipps:**
+  - Der Strom ist in allen Bauteilen einer Reihenschaltung identisch. [cite: 1874]
+
+**Widerstände in Parallelschaltung**
+Bei einer Parallelschaltung addieren sich die Kehrwerte der Widerstände zum Kehrwert des Gesamtwiderstandes. [cite: 1901]
+
+- **Formel (Gesamtwiderstand):**
+  $\frac{1}{R_{ges}} = \sum_{i=1}^{n} \frac{1}{R_i} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n}$ [cite: 1907]
+- **Spezialfall für zwei Widerstände:**
+  $R_{ges} = \frac{R_1 \cdot R_2}{R_1 + R_2}$ [cite: 1928]
+- **Tipps:**
+  - Die Spannung ist an allen Bauteilen einer Parallelschaltung identisch. [cite: 1903]
+  - Der Gesamtwiderstand ist immer kleiner als der kleinste Einzelwiderstand.
+
+---
+
+#### **3. Elektrische Energie, Leistung und Wirkungsgrad**
+
+**Elektrische Leistung (P)**
+Die Leistung ist die pro Zeit umgesetzte Energie. [cite: 4575]
+
+- **Formel:**
+  $P(t) = U(t) \cdot I(t) = I(t)^2 \cdot R = \frac{U(t)^2}{R}$ [cite: 1757, 4571]
+- **Bei konstanter Leistung:**
+  $P = \frac{E}{t}$ [cite: 4575]
+- **SI-Einheiten:**
+  - $P$: Watt ($W$) [cite: 4577]
+  - $E$: Joule ($J$) [cite: 4578]
+  - $t$: Sekunden ($s$)
+- **Tipps:**
+  - Achten Sie auf die Umrechnung der Energieeinheiten: $1~kWh = 1000~Wh = 3.600.000~Ws = 3.600.000~J$. [cite: 4581]
+
+**Energie zur Erwärmung (Thermische Energie)**
+Diese Formel berechnet die Energie, die benötigt wird, um eine bestimmte Masse um eine bestimmte Temperatur zu erwärmen. [cite: 4592]
+
+- **Formel:**
+  $E_{th} = m \cdot c \cdot \Delta T$ [cite: 4592]
+- **Variablen:**
+  - $E_{th}$: Thermische Energie
+  - $m$: Masse [cite: 4593]
+  - $c$: Spezifische Wärmekapazität des Stoffes (für Wasser: $c_{Wasser} \approx 4.18 \frac{kJ}{kg \cdot K}$) [cite: 4597, 4599]
+  - $\Delta T$: Temperaturdifferenz [cite: 4597]
+- **SI-Einheiten:**
+  - $E_{th}$: Joule ($J$)
+  - $m$: Kilogramm ($kg$)
+  - $c$: Joule pro Kilogramm mal Kelvin ($J/(kg \cdot K)$)
+  - $\Delta T$: Kelvin ($K$) oder Grad Celsius ($°C$)
+- **Tipps:**
+  - Für Wasser gilt: 1 Liter Wasser entspricht 1 kg Masse. [cite: 4613]
+  - Achten Sie auf das "k" in kJ bei der spezifischen Wärmekapazität. [cite: 4599] Rechnen Sie es bei Bedarf in Joule um ($1 kJ = 1000 J$).
+
+**Mechanische Energie**
+
+- **Potentielle Energie (Lageenergie):**
+  $E_{pot} = m \cdot g \cdot \Delta h$ [cite: 4623]
+- **Kinetische Energie (Bewegungsenergie):**
+  $E_{kin} = \frac{1}{2} m v^2$ [cite: 4627]
+- **Variablen:**
+  - $m$: Masse [cite: 4626]
+  - $g$: Erdbeschleunigung ($\approx 9.81~m/s^2$) [cite: 4626]
+  - $\Delta h$: Höhenunterschied [cite: 4626]
+  - $v$: Geschwindigkeit [cite: 4628]
+- **SI-Einheiten:**
+  - $E$: Joule ($J$)
+  - $m$: Kilogramm ($kg$)
+  - $h$: Meter ($m$)
+  - $v$: Meter pro Sekunde ($m/s$)
+- **Tipps:**
+  - Geschwindigkeiten werden oft in $km/h$ angegeben. Rechnen Sie diese unbedingt in $m/s$ um:
+    **Umrechnung:** Geschwindigkeit in $km/h \div 3.6 =$ Geschwindigkeit in $m/s$. [cite: 4647]
+
+**Wirkungsgrad ($\eta$)**
+Der Wirkungsgrad beschreibt das Verhältnis von abgegebener Nutzleistung zu aufgenommener Leistung. [cite: 4665]
+
+- **Formeln:**
+  - **Einzelner Wirkungsgrad:** $\eta = \frac{P_{aus}}{P_{ein}} = \frac{E_{aus}}{E_{ein}}$ [cite: 4665]
+  - **Gesamtwirkungsgrad einer Kette:** $\eta_{ges} = \eta_1 \cdot \eta_2 \cdot \dots \cdot \eta_n$ [cite: 4670]
+- **Variablen:**
+  - $\eta$ (eta): Wirkungsgrad (dimensionslos, oft als Prozent angegeben)
+  - $P_{aus}, E_{aus}$: Nutzleistung / Nutzenergie
+  - $P_{ein}, E_{ein}$: Zugeführte Leistung / Energie
+- **Tipps:**
+  - Der Wirkungsgrad ist immer kleiner als 1 (bzw. 100%). [cite: 4667]
+  - Bei einer Wirkungskette muss man "von hinten nach vorne" rechnen, um die benötigte Eingangsleistung zu ermitteln, z.B. $P_{ein} = P_{aus} / \eta$. [cite: 4838]
+
+**Leistung einer Windkraftanlage**
+Die Leistung, die dem Wind entnommen werden kann, hängt stark von der Windgeschwindigkeit ab.
+
+- **Formeln:**
+  - **Windleistung:** $P_W = \frac{1}{2} \rho \cdot \pi \cdot r^2 \cdot v^3$ [cite: 5080]
+  - **Anlagenleistung:** $P_{WKA} = P_W \cdot c_P$ [cite: 5081]
+- **Variablen:**
+  - $P_W$: Leistung im Wind
+  - $P_{WKA}$: An die Turbine abgegebene mechanische Leistung
+  - $\rho$ (rho): Luftdichte (ca. $1.22~kg/m^3$ bei 15°C) [cite: 5133]
+  - $r$: Rotorradius [cite: 5080]
+  - $v$: Windgeschwindigkeit [cite: 5080]
+  - $c_P$: Leistungsbeiwert (Wirkungsgrad, max. 0,593, praktisch $\approx 0.5$) [cite: 5083, 5093]
+- **Tipps:**
+  - Die Leistung steigt mit der **dritten Potenz** der Geschwindigkeit! [cite: 5080] Eine Verdopplung der Windgeschwindigkeit führt zu einer achtfachen Leistung.
+  - Rechnen Sie die Windgeschwindigkeit immer in $m/s$ um.
+
+---
+
+#### **4. Elektrisches Feld und Kapazität**
+
+**RC-Filter (Tiefpass & Hochpass)**
+RC-Glieder wirken als frequenzabhängige Spannungsteiler. [cite: 324]
+
+- **Formeln:**
+  - **Grenzfrequenz:** $f_g = \frac{1}{2\pi RC}$ [cite: 327, 462]
+  - **Spannungsverhältnis Tiefpass:** $\frac{U_{aus}}{U_{ein}} = \frac{1}{\sqrt{1 + (\omega RC)^2}}$ [cite: 325]
+  - **Spannungsverhältnis Hochpass:** $\frac{U_{aus}}{U_{ein}} = \frac{\omega RC}{\sqrt{1 + (\omega RC)^2}}$ [cite: 460]
+- **Variablen:**
+  - $f_g$: Grenzfrequenz [cite: 333]
+  - $\omega$: Kreisfrequenz ($2\pi f$) [cite: 331]
+- **Tipps:**
+  - An der Grenzfrequenz $f_g$ sinkt die Ausgangsspannung auf ca. 70.7% ($\frac{1}{\sqrt{2}}$) des Eingangswertes ab, was einem Pegelabfall von -3 dB entspricht. [cite: 332]
+  - Ein **Tiefpass** lässt tiefe Frequenzen passieren und blockiert hohe.
+  - Ein **Hochpass** lässt hohe Frequenzen passieren und blockiert tiefe.
+
+**Energie im Kondensator**
+Die in einem Kondensator gespeicherte Energie hängt von seiner Kapazität und der anliegenden Spannung ab.
+
+- **Formel:**
+  $E = \frac{1}{2} C \cdot U^2$ [cite: 2449]
+- **Variablen:**
+  - $E$: Energie
+  - $C$: Kapazität
+  - $U$: Spannung
+- **SI-Einheiten:**
+  - $E$: Joule ($J$) oder Wattsekunden ($Ws$)
+  - $C$: Farad ($F$)
+  - $U$: Volt ($V$)
+- **Tipps:**
+  - Achten Sie auf die Präfixe der Kapazität (z.B. $\mu F = 10^{-6} F$, $nF = 10^{-9} F$, $pF = 10^{-12} F$).
+
+**RC-Glied: Lade- und Entladevorgänge**
+Das Verhalten von Widerstands-Kondensator-Schaltungen wird durch die Zeitkonstante $\tau$ beschrieben.
+
+- **Formeln:**
+  - **Zeitkonstante:** $\tau = R \cdot C$ [cite: 2373]
+  - **Entladespannung:** $U_C(t) = U_{C,0} \cdot e^{-\frac{t}{\tau}}$ [cite: 2402]
+- **Variablen:**
+  - $\tau$: Zeitkonstante [cite: 2373]
+  - $R$: Widerstand
+  - $C$: Kapazität
+  - $U_C(t)$: Spannung am Kondensator zur Zeit $t$
+  - $U_{C,0}$: Anfangsspannung am Kondensator
+  - $t$: Zeit
+- **SI-Einheiten:**
+  - $\tau$: Sekunden ($s$)
+  - $R$: Ohm ($\Omega$)
+  - $C$: Farad ($F$)
+  - $U$: Volt ($V$)
+  - $t$: Sekunden ($s$)
+- **Tipps zur Fehlervermeidung:**
+  - Um die Zeit $t$ zu berechnen, zu der eine bestimmte Spannung erreicht wird, muss die Formel logarithmisch umgestellt werden.
+    $e^{-t/\tau} = \frac{U_C(t)}{U_{C,0}} \implies -\frac{t}{\tau} = \ln\left(\frac{U_C(t)}{U_{C,0}}\right) \implies t = -\tau \cdot \ln\left(\frac{U_C(t)}{U_{C,0}}\right)$ [cite: 2437, 2438]
+  - Achten Sie auf die Einheiten, besonders bei $R$ (z.B. $k\Omega, G\Omega$) und $C$ ($\mu F$).
+
+**Kondensatoren in Schaltungen**
+
+- **Reihenschaltung:** $\frac{1}{C_{ers}} = \sum_{i=1}^{n} \frac{1}{C_i}$ [cite: 2527]
+- **Parallelschaltung:** $C_{ers} = \sum_{i=1}^{n} C_i$ [cite: 2516]
+- **Ladung und Spannung:**
+  - $Q = C \cdot U$ [cite: 2234]
+  - In einer Reihenschaltung ist die Ladung $Q$ auf jedem Kondensator gleich. [cite: 2506] Die Gesamtspannung teilt sich auf. [cite: 2507]
+
+---
+
+#### **5. Magnetisches Feld und Induktion**
+
+**Verhältnis von Induktivität und Windungszahl**
+Für einen idealen Transformator mit zwei Spulen auf demselben Kern gilt:
+
+- **Formel:**
+  $\frac{L_{pri}}{L_{sek}} = \left(\frac{n_{pri}}{n_{sek}}\right)^2$ [cite: 1012]
+- **Variablen:**
+  - $L_{pri}, L_{sek}$: Induktivität der Primär- und Sekundärspule
+  - $n_{pri}, n_{sek}$: Windungszahl der Primär- und Sekundärspule
+- **Tipps:**
+  - Das Verhältnis der **Induktivitäten** ist **quadratisch** zum Verhältnis der **Windungszahlen**. [cite: 1012] Daraus lässt sich das Windungsverhältnis ableiten: $\frac{n_{pri}}{n_{sek}} = \sqrt{\frac{L_{pri}}{L_{sek}}}$. [cite: 1012]
+
+_(Alle anderen Formeln zu Magnetfeldern und Induktion aus der vorherigen Antwort sind weiterhin gültig.)_
+
+---
+
+#### **6. Halbleiterbauelemente**
+
+**Arbeitspunkt einer Diode (Grafische Methode)**
+Der Arbeitspunkt einer Diode in einer einfachen Schaltung mit einem Vorwiderstand kann grafisch ermittelt werden.
+
+- **Methode:**
+  1.  Zeichnen Sie die **Diodenkennlinie** ($I_D$ über $U_D$) in ein Diagramm. [cite: 931]
+  2.  Berechnen Sie die beiden Punkte für die **Arbeitsgerade** der Spannungsquelle und des Widerstands: [cite: 944]
+      - **Leerlaufspannung ($U_L$):** Spannung bei Strom Null. [cite: 950] $I_D = 0 \implies U_D = U_{Quelle}$. Dies ist der Schnittpunkt mit der horizontalen Achse (x-Achse). [cite: 967, 969]
+      - **Kurzschlussstrom ($I_K$):** Strom bei Spannung Null. [cite: 932] $U_D = 0 \implies I_D = U_{Quelle} / R_{Vorwiderstand}$. [cite: 968, 969] Dies ist der Schnittpunkt mit der vertikalen Achse (y-Achse).
+  3.  Zeichnen Sie die Arbeitsgerade durch diese beiden Punkte.
+  4.  Der **Schnittpunkt** von Diodenkennlinie und Arbeitsgerade ist der **Arbeitspunkt** der Schaltung. [cite: 935, 936]
+- **Tipps:**
+  - Diese Methode ist nützlich, da die Diodenkennlinie nichtlinear ist und eine rein rechnerische Lösung komplex wäre.
+
+**LED mit Vorwiderstand**
+Zur Strombegrenzung benötigt eine LED einen Vorwiderstand in Reihe. [cite: 1151]
+
+- **Formel zur Berechnung des Vorwiderstands:**
+  $R_{Vor} = \frac{U_{Quelle} - U_F}{I_F}$ [cite: 1591, 1597, 1616]
+- **Variablen:**
+  - $R_{Vor}$: Benötigter Vorwiderstand
+  - $U_{Quelle}$: Spannung der Versorgungsquelle
+  - $U_F$: Durchlassspannung (Flussspannung) der LED (aus Datenblatt oder Tabelle) [cite: 1150]
+  - $I_F$: Gewünschter Durchlassstrom der LED (z.B. 10 mA) [cite: 1151]
+- **SI-Einheiten:**
+  - $R$: Ohm ($\Omega$)
+  - $U$: Volt ($V$)
+  - $I$: Ampere ($A$)
+- **Tipps:**
+  - Achten Sie darauf, den Strom $I_F$ von Milliampere (mA) in Ampere (A) umzurechnen ($10~mA = 0.01~A$) für die Berechnung in SI-Einheiten.
+  - Die Spannung $U_R$ über dem Widerstand ist die Differenz aus der Quellenspannung und der LED-Spannung: $U_R = U_{Quelle} - U_F$.
+
+**Bipolartransistor (als Verstärker/Schalter)**
+Ein Transistor kann als stromgesteuerter Schalter oder Verstärker dienen. [cite: 1463, 1465]
+
+- **Formeln:**
+  - **Stromverstärkung:** $I_C \approx \beta \cdot I_B$ [cite: 1369]
+  - **Eingangskreis (Maschengleichung):** $U_{Quelle} = I_B \cdot R_B + U_{BE}$ [cite: 1427]
+- **Variablen:**
+  - $I_C$: Kollektorstrom [cite: 1332]
+  - $I_B$: Basisstrom [cite: 1337]
+  - $\beta$ (beta): Gleichstromverstärkungsfaktor (typ. 100-300) [cite: 1425]
+  - $R_B$: Basiswiderstand
+  - $U_{BE}$: Basis-Emitter-Spannung
+- **Tipps und Fehlervermeidung:**
+  - Für eine Berechnung kann die Basis-Emitter-Spannung eines Siliziumtransistors im leitenden Zustand mit ca. **0.7 V** angenähert werden. [cite: 1390, 1427]
+  - Um den Basisstrom $I_B$ zu berechnen, stellen Sie die Maschengleichung um: $I_B = \frac{U_{Quelle} - U_{BE}}{R_B}$. [cite: 1427]
+  - Achten Sie auf die Einheiten, insbesondere $k\Omega$ für Widerstände und $\mu A$ oder $mA$ für Ströme.
